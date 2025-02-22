@@ -38,9 +38,9 @@ import projectRouter from "./src/routes/projectRouter.js"
     app.use("/skill/:id",skillRouter)
 
     app.use("/project",projectRouter)
-    app.get("/project",(req,res)=>{
-      res.send("Project")
-    })
+    // app.get("/project",(req,res)=>{
+    //   res.send("Project")
+    // })
       
       
       

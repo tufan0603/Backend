@@ -9,5 +9,15 @@ const addProject =  async (req, res) => {
     }
   }
 
+const getProject = async (req, res)=>{
+    try {
+      const newData = await Project.find();
+      
+      res.json(newData);
+    } catch (error) {
+      res.status(500).json({ message: "Server error", error });
+    }
+  }
 
-  export {addProject}
+
+  export {addProject, getProject}
