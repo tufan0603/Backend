@@ -7,6 +7,7 @@ import Contact from "./src/models/contact.js"
 import Skill from "./src/models/skill.js"
 import skillRouter from "./src/routes/skillRoutes.js"
 import contactRouter from "./src/routes/contactRouter.js"
+import projectRouter from "./src/routes/projectRouter.js"
 
 // app.get("/", (req, res)=>{})
     app.use(cors())
@@ -35,6 +36,11 @@ import contactRouter from "./src/routes/contactRouter.js"
     app.use("/skill",skillRouter)
 
     app.use("/skill/:id",skillRouter)
+
+    app.use("/project",projectRouter)
+    app.get("/project",(req,res)=>{
+      res.send("Project")
+    })
       
       
       
